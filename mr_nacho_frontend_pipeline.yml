@@ -31,7 +31,7 @@ to-stag:
   - sudo rm -rf ~/chicstays-frontend/dist
   - sudo cp -r dist/ ~/chicstays-frontend/dist
  tags:
-  - prod
+  - stag
  artifacts:
    paths:
      - results.log
