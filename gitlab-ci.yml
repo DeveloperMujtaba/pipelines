@@ -29,7 +29,7 @@ to-prod:
 to-stag:
  stage: deploy-to-stag
  rules:
-  - if: '$CI_COMMIT_BRANCH == "milestone5" || '$CI_COMMIT_BRANCH == "milestone6" || '$CI_COMMIT_BRANCH == "milestone7" || '$CI_COMMIT_BRANCH == "milestone8"'
+  - if: '$CI_COMMIT_BRANCH == "milestone5" || $CI_COMMIT_BRANCH == "milestone6" || $CI_COMMIT_BRANCH == "milestone7" || $CI_COMMIT_BRANCH == "milestone8"'
  script: 
   - pwd
   - ls -la
