@@ -13,11 +13,24 @@ to-prod:
   - sudo rm -rf /var/www/html/chicstays-backend
   - ls -la /var/www/html
   - sudo cp -r chicstays-backend/ /var/www/html/chicstays-backend
+  #chown the root directory:
+  - sudo chown -R www-data:www-data /var/www/html/chicstays-backend
+  #Set file permission to 644:
+  - sudo find /var/www/html/chicstays-backend -type f -exec chmod 644 {} \;
+  #Set directory permission to 755:
+  - sudo find /var/www/html/chicstays-backend -type d -exec chmod 755 {} \;
+  #Give rights for web server to read and write storage and cache
+  - sudo chgrp -R www-data /var/www/html/chicstays-backend/storage /var/www/html/chicstays-backend/bootstrap/cache
+  - sudo chmod -R ug+rwx /var/www/html/chicstays-backend/storage /var/www/html/chicstays-backend/bootstrap/cache
+  #ls the directory
   - ls -la /var/www/html/chicstays-backend
   - cd /var/www/html/chicstays-backend
   - pwd
-  - composer install
+  # run composer
+  - composer install 
+  #copy .env file
   - cp ~/.env .env
+  # check n verify the files
   - ls -la /var/www/html/chicstays-backend
  tags:
   - prod
