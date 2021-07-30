@@ -10,8 +10,8 @@ to-prod:
   - ls -la
   - npm install
   - npm run prod
-  - sudo rm -rf ~/chicstays-frontend/dist
-  - sudo cp -r dist ~/chicstays-frontend
+  - sudo rm -rf ~/chicstays-frontend/dist/
+  - sudo cp -r dist/ ~/chicstays-frontend/dist/
  tags:
   - prod
  artifacts:
@@ -28,8 +28,8 @@ to-stag:
   - ls -la
   - npm install
   - npm run prod
-  - sudo rm -rf ~/chicstays-frontend/dist
-  - sudo cp -r dist ~/chicstays-frontend
+  - sudo rm -rf ~/chicstays-frontend/dist/
+  - sudo cp -r dist/ ~/chicstays-frontend/dist/
  tags:
   - stag
  artifacts:
