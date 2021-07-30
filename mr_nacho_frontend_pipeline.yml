@@ -31,11 +31,11 @@ to-stag:
   - ls -la
   - pwd
   - ls - la /home/ChicStays/chicstays-frontend/dist/
-  - sudo rm -rf /home/ChicStays/chicstays-frontend/dist/
+  - sudo rm -rf /home/ChicStays/chicstays-frontend/dist/*
   - ls -la
   - pwd
   - ls - la /home/ChicStays/chicstays-frontend/dist/
-  - sudo cp -r dist/ /home/ChicStays/chicstays-frontend/dist/
+  - sudo cp -r dist/* /home/ChicStays/chicstays-frontend/dist
   - ls -la
   - pwd
   - ls - la /home/ChicStays/chicstays-frontend/dist/
