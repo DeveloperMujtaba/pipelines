@@ -26,10 +26,10 @@ to-prod:
   - ls -la /var/www/html/chicstays-backend
   - cd /var/www/html/chicstays-backend
   - pwd
-  # run composer
-  - composer install 
   #copy .env file
   - cp ~/.env .env
+  # run composer
+  - composer install 
   # check n verify the files
   - ls -la /var/www/html/chicstays-backend
  tags:
@@ -64,10 +64,10 @@ to-stag:
   - ls -la /var/www/html/chicstays-backend
   - cd /var/www/html/chicstays-backend
   - pwd
+   #copy .env file
+  - cp ~/.env .env
   # run composer
   - composer install 
-  #copy .env file
-  - cp ~/.env .env
   # check n verify the files
   - ls -la /var/www/html/chicstays-backend
  tags:
