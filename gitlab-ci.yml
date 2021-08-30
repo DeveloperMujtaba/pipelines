@@ -30,8 +30,6 @@ to-prod:
   - cp ~/.env .env
   # run composer
   - composer install 
-  # cron jobs
-  - php artisan schedule:run >> /dev/null 2>&1
   - ls -la /var/www/html/chicstays-backend
  tags:
   - prod
@@ -69,8 +67,6 @@ to-stag:
   - cp ~/.env .env
   # run composer
   - composer install 
-  # cron jobs
-  - php artisan schedule:run >> /dev/null 2>&1
   # check n verify the files
   - ls -la /var/www/html/chicstays-backend
  tags:
